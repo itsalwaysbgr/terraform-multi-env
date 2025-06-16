@@ -3,7 +3,7 @@ variable "project" {
 }
 
 variable "environment" {
-  default = "dev"
+
 }
 
 
@@ -35,3 +35,6 @@ variable "instances" {
   
 }
 
+variable "instance_type" {
+  
+}
