@@ -1,40 +1,50 @@
 variable "project" {
-  default = "roboshop"
+    default = "roboshop"
 }
 
 variable "environment" {
-
+    
 }
 
 
-
-variable "common_tags" {
-  default = {
-    Project   = "roboshop"
-    Terraform = "true"
-  }
+variable "common_tags"{
+    default = {
+        Project = "roboshop"
+        Terraform = "true"
+    }
 }
-
-/* variable "final-name" {
-    default = "${var.project}-${var.environment}-${var.component}"
-} */
-
-# ec2 name = cart
-# ec2 name = roboshop-dev-cart
 
 variable "sg_name" {
-  default= "allow-all"
+    default = "allow-all"
 }
 
 variable "sg_description" {
-  default="Allowing all ports from all IP's"
+    default = "allowing all ports from all IP"
 }
 
 variable "instances" {
-  default=["mongodb","redis"]
-  
+    default = ["mongodb","redis"]
+}86s
+
+variable "from_port" {
+    default = 0
+}
+
+variable "to_port" {
+    default = 0
+}
+
+
+variable "cidr_blocks" {
+    default = ["0.0.0.0/0"]
+}
+
+variable "ami_id" {
+  type        = string
+  default     = "ami-09c813fb71547fc4f"
+  description = "AMI ID of joindevops RHEL9"
 }
 
 variable "instance_type" {
-  
+    
 }
